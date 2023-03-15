@@ -1,19 +1,4 @@
-import type { Route } from '@vaadin/router';
-import './views/empty/empty-view';
+import { Route } from "@vaadin/router";
+import "./views/messages/messages-view";
 
-export type ViewRoute = Route & {
-  title?: string;
-  icon?: string;
-  children?: ViewRoute[];
-};
-
-export const views: ViewRoute[] = [
-  // place routes below (more info https://hilla.dev/docs/routing)
-  {
-    path: '',
-    component: 'empty-view',
-    icon: 'file',
-    title: 'Empty',
-  },
-];
-export const routes: ViewRoute[] = [...views];
+export const routes: Route[] = [{ path: "", component: "messages-view" }];
